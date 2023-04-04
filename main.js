@@ -161,6 +161,7 @@ function playpause(x) {
   } else {
     allowEdit(form) 
   }
+  checkAll()
 }
 
 function check(form) {
@@ -385,4 +386,27 @@ function closeSettings(){
   let sett = document.querySelector(".settings")
   sett.style.visibility = "hidden"
   sett.style.transform = "scale(0.0005)"
+}
+
+let alreadyfinished = false;
+function checkAll() {
+  let allChecked = true
+  let forms = document.querySelectorAll("form")
+  for(const f of forms){
+    let blanks = f.querySelectorAll('input')
+      if(blanks[0].style.borderBottom == '') {
+        allChecked = false;
+      }
+    }
+  if(allChecked && alreadyfinished == false) {
+    alreadyfinished = true
+    let yay = document.querySelector(".youdidit")
+    yay.style.visibility = "visible"
+    yay.style.transform = "scale(1) translateY(25%)"
+    setTimeout(function () {
+        yay.style.transition = "0.3s"
+        yay.style.transform = "scale(0.005)"
+        yay.style.visibility = "hidden"
+    }, 5000);
+  }
 }
