@@ -172,15 +172,15 @@ function check(form) {
   let inputs = Array.apply(null, form.querySelectorAll('input'))
   for(const inp of inputs) {
     inp.readOnly = "readonly"
-    // if(rev && inp.value.toLowerCase().trim() == "***") {
-    //   inp.value = inp.answer;
-    // }
+    if(rev && inp.value.toLowerCase().trim() == "***") {
+      inp.value = inp.answer;
+    }
     if(inp.value.toLowerCase().trim() == inp.answer.toLowerCase().trim()) {
       inp.style.borderBottom = "2px solid #418b5a"
       inp.style.color = "#418b5a"
       inp.value = inp.answer
     } else if (removeAccents(inp.answer.toLowerCase().trim()) == removeAccents(inp.value.toLowerCase()).trim()) {
-      if(true/*reqAcc*/) {
+      if(reqAcc) {
         inp.style.borderBottom = "2px solid #0F6292"
         inp.style.color = "#0F6292"
       } else {
