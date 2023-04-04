@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Input a Song</title>
+  <link href="inputsong.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
+  <script src="https://kit.fontawesome.com/0acf43e926.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="faq">
+    <div class="inp">
+      <form autocomplete="off" id="inpform">
+        Input a Song: <br>
+        <div class="warn">Please try to be as exact as possible to ensure the accuracy of song retrieval!</div>
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="artist" placeholder="Artist">
+        <input type="button" id="subm" value="Submit" onclick="start()">
+      </form>
+    </div>
+    <br>
+    <div id="tex">
+      Don't know which song to use? <br>Look no further for recommendations:
+    </div>
+    <ul>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>English</h2>
+        <p>Coming Soon!</p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>French</h2>
+        <p><span id="lafamille" onclick="preset('lafamille')">La Famille by Tony Parker</span><br><span id="papaoutai" onclick="preset('papaoutai')">Papaoutai by Stromae</span></p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Current French Hits</h2>
+        <p>COEUR DE ICE by Zola<br>Jolie by GAULOIS<br>Room 69 by Tayc<br>Nocif by Hamza<br>AMBER by Zola<br>NO LÈCHE by Gazo<br>Mueda by Tiakola<br>Capitaine by Djadja & Dinaz<br>Bolide allemand by SDM</p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Current English Hits</h2>
+        <p>Last Night by Morgan Wallen<br>Boy's a liar Pt. 2 by PinkPantheress<br>Kill Bill by SZA<br>Flowers by Miley Cyrus<br>DOGTOOTH by Tyler, the Creator<br>Creepin' (with The Weeknd) by Metro Boomin<br>You Proof by Morgan Wallen<br>SORRY NOT SORRY by Tyler, the Creator<br>Just Wanna Rock by Lil Uzi Vert</p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
