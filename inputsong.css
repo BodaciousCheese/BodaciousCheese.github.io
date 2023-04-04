@@ -178,13 +178,14 @@ img {
   font-family: "Playfair Display", sans-serif;
   font-size:3em;
   margin-top:8%;
+  display:flex;
 }
 
 .warn{
   font-style: italic;
   font-size: 0.3em;
   margin-top: 5px;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 #tex{
@@ -239,7 +240,7 @@ input[type=text]:focus::placeholder{
 
 #subm{
   margin-top:12.5px;
-  margin-left: 40.5%;
+  margin-left: 41.5%;
   padding: 11px 17px;
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
